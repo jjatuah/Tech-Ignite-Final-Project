@@ -92,7 +92,7 @@ const AgentDetails = () => {
         disableDensitySelector
       />
       {selectedAgent && (
-        <div className="popup">
+        <div className="popups">
           <div className="popup-content">
             <div className="popup-header">
               <h2>Agent Information</h2>

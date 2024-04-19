@@ -65,7 +65,7 @@ const Chargeback = () => {
       </div>
 
       {showPopup && (
-        <div className="popup">
+        <div className="popup-charge">
           <FaCircleCheck className='check-icon'/>
           <p>Your request has been sent.</p>
         </div>
