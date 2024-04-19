@@ -70,7 +70,7 @@ const Login = () => {
           </div> 
           <span>Forgot Password</span>
           <button type="submit" >Continue</button>
-          {error && <p>{error}</p>}
+          {error && <p className="error-text">{error}</p>}
         </form>
       </div>
     </div>

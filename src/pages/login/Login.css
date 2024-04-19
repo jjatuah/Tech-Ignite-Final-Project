@@ -4,6 +4,8 @@
   background: url(../../assets/SVG.png);
 }
 
+
+
 .login-form {
   width: 100vw;
   height: 75vh;
@@ -90,4 +92,12 @@ form > button:hover {
   cursor: pointer;
   border: 1px solid var(--backColor);
   transition: .5s;
+}
+
+
+.error-text {
+  text-align: center;
+  font-size: 13px;
+  color: red;
+  font-weight: 500;
 }
