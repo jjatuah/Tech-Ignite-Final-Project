@@ -14,11 +14,11 @@ const TransactionComparison = ({ completedTransactions, failedTransactions }) =>
     <div className='transaction-comparison'>
       <div className="terminals">
         <h4>Terminals</h4>
-        <select name="duration" id="duration">
+        {/* <select name="duration" id="duration">
           <option value="this week">This Week</option>
           <option value="this month">This Month</option>
           <option value="this year">This Year</option>
-        </select>
+        </select> */}
       </div>
 
       <div className="terminal-details">

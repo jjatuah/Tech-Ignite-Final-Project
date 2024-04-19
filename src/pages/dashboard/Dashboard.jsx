@@ -99,11 +99,11 @@ const Dashboard = () => {
           <div className="box box4">
             <div className="box4-header">
               <p>Transactions</p>
-              <select name="duration" id="duration">
+              {/* <select name="duration" id="duration">
                 <option value="this week">This Week</option>
                 <option value="this month">This Month</option>
                 <option value="this year">This Year</option>
-              </select>
+              </select> */}
             </div>
             <ResponsiveContainer width="100%" height="95%">
               <BarChart

@@ -43,8 +43,8 @@ const MerchantDetails = () => {
   const columns = [
     { field: 'id', headerName: 'SN', width: 80 },
     { field: 'agentName', headerName: 'Merchant Name', width: 150 },
-    { field: 'merchantId', headerName: 'Merchant ID', type: 'number', width: 180 },
-    { field: 'terminalId', headerName: 'Terminal ID', width: 150 },
+    { field: 'merchantId', headerName: 'Merchant ID', type: 'number', width: 150 },
+    { field: 'terminalId', headerName: 'Terminal ID', width: 160 },
     { field: 'state', headerName: 'State', width: 120 },
     { field: 'created', headerName: 'Created', width: 180 },
     {
@@ -72,31 +72,34 @@ const MerchantDetails = () => {
     <div className="merchant-details">
       <Navbar header='Merchant Details' />
 
-      <DataGrid
-        className='data-grid'
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: { 
-            paginationModel: { 
-              pageSize: 6,
+      <div className="table-grid-cont">
+
+        <DataGrid
+          className='data-grid'
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: { 
+              paginationModel: { 
+                pageSize: 6,
+              },
             },
-          },
-        }}
-        slots={{toolbar: GridToolbar}}
-        slotProps={{
-          toolbar : {
-            showQuickFilter : true,
-            quickFilterProps : { debounceMs : 500},
-          }
-        }}
-        pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
-        disableColumnFilter
-        disableColumnSelector
-        disableDensitySelector
-      />
+          }}
+          slots={{toolbar: GridToolbar}}
+          slotProps={{
+            toolbar : {
+              showQuickFilter : true,
+              quickFilterProps : { debounceMs : 500},
+            }
+          }}
+          pageSizeOptions={[5]}
+          checkboxSelection
+          disableRowSelectionOnClick
+          disableColumnFilter
+          disableColumnSelector
+          disableDensitySelector
+        />
+      </div>
       {selectedAgent && (
         <div className="popups">
           <div className="popup-content">

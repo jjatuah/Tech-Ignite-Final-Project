@@ -41,13 +41,13 @@ const AgentTransactions = () => {
   };
 
   const columns = [
-    { field: 'id', headerName: 'SN', width: 80 },
-    { field: 'transId', headerName: 'Transaction Ref', width: 220 },
+    { field: 'id', headerName: 'SN', width: 50 },
+    { field: 'transId', headerName: 'Transaction Ref', width: 200 },
     { field: 'amount', headerName: 'Amount', width: 100 },
     { field: 'transactionDate', headerName: 'Transaction Date',  width: 150 },
-    { field: 'terminalId', headerName: 'Terminal ID', width: 120 },
+    { field: 'terminalId', headerName: 'Terminal ID', width: 100 },
     { field: 'agentName', headerName: 'Agent Name', width: 150 },
-    { field: 'region', headerName: 'Region', width: 150 },
+    { field: 'region', headerName: 'Region', width: 80 },
     {
       field: 'status',
       headerName: 'Status',
@@ -79,31 +79,33 @@ const AgentTransactions = () => {
       </div>
       <h2>Agent Transactions</h2>
       
-      <DataGrid
-        className='data-grid'
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: { 
-            paginationModel: { 
-              pageSize: 6,
+      <div className="table-grid-cont">
+        <DataGrid
+          className='data-grid'
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: { 
+              paginationModel: { 
+                pageSize: 6,
+              },
             },
-          },
-        }}
-        slots={{toolbar: GridToolbar}}
-        slotProps={{
-          toolbar : {
-            showQuickFilter : true,
-            quickFilterProps : { debounceMs : 500},
-          }
-        }}
-        pageSizeOptions={[5]}
-        checkboxSelection
-        disableRowSelectionOnClick
-        disableColumnFilter
-        disableColumnSelector
-        disableDensitySelector
-      />
+          }}
+          slots={{toolbar: GridToolbar}}
+          slotProps={{
+            toolbar : {
+              showQuickFilter : true,
+              quickFilterProps : { debounceMs : 500},
+            }
+          }}
+          pageSizeOptions={[5]}
+          checkboxSelection
+          disableRowSelectionOnClick
+          disableColumnFilter
+          disableColumnSelector
+          disableDensitySelector
+        />
+      </div>
       {selectedAgent && (
         <div className="popups">
           <div className="popup-content">
